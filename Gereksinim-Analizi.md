@@ -14,7 +14,7 @@ GEREKSİNİM DAĞILIMLARI
 
 Merve sürücü'nün Gereksinim Dağılımı
 [text](<Merve -Sürücü-Gereksinimler.md>)
-Merve -Sürücü-Gereksinimler.md
+
 
 
 
