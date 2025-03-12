@@ -1,4 +1,5 @@
-Merve Sürücü Durum Senaryosu: [Merve-Surucu-Durum-Senaryosu.pdf](https://raw.githubusercontent.com/merve824/linktree_clone/main/senaryolar/Merve-Surucu-Durum-Senaryoları.pdf)
+1. Merve Sürücü Durum Senaryosu
+"C:\Users\merve\Downloads\Merve -Sürücü-Durum-Senaryoları.pdf"
 
 
 
