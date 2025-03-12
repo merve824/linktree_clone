@@ -1,4 +1,4 @@
-GEREKSİNİMLER
+  GEREKSİNİMLER
 
 1.Kullanıcı Girişi(merve sürücü)
 
@@ -10,7 +10,7 @@ GEREKSİNİMLER
 
 5.Analitik Gösterim(merve sürücü)
 
-GEREKSİNİM DAĞILIMLARI
+  GEREKSİNİM DAĞILIMLARI
 
 Merve sürücü'nün Gereksinim Dağılımı
 
