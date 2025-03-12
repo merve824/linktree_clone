@@ -16,6 +16,17 @@ Proje Ekibi: Merve Sürücü
 
 1.[Gereksinim Analizi](<Merve -Sürücü-Gereksinimler.md>)
 
+2.[Durum-Diyagramı](<Durum-Diyagramı.md>)
+
+
+
+
+
+
+
+
+
+
 
 
 
