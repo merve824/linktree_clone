@@ -10,7 +10,7 @@ Kullanıcıların yeni hesaplar oluşturarak hizmetin tüm özelliklerine erişm
     Profil, kullanıcı adı, profil resmi (isteğe bağlı), biyografi ve sosyal medya bağlantıları gibi bilgileri içerebilir.
     Profil oluşturma, kullanıcıların kendilerini veya markalarını tanıtmalarına ve diğer kullanıcılarla etkileşim kurmalarına olanak tanır
 
-4. Bağlatı Ekleme ve Düzenleme:
+4. Bağlantı Ekleme ve Düzenleme:
      Kullanıcılar, profil sayfalarına istedikleri bağlantıları ekleyebilmeli ve düzenleyebilmelidir.
      Bağlantılar, URL ve başlık bilgilerini içermelidir.
      Bu işlevsellik, kullanıcıların farklı platformlardaki içeriklerini tek bir yerde toplamalarına ve paylaşmalarına olanak tanır
