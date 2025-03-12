@@ -6,6 +6,18 @@ Bu proje, kullanıcıların tek bir bağlantı altında birden fazla bağlantıy
 Proje Türü: Web Uygulaması, Sosyal Medya Aracı
 
 Referans: Linktree (linktr.ee)
+
 Grup adı:LinkHub
+
 Proje Ekibi: Merve Sürücü
+
+
+
+
+1.[Gereksinim Analizi](<Merve -Sürücü-Gereksinimler.md>)
+
+
+
+
+
 
