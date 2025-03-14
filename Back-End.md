@@ -11,7 +11,7 @@ RabbitMQ: Kullanıldı
 
 
 
-Merve Sürücü Backend:
+MERVE SÜRÜCÜ BACKEND
 
 1.Kullanıcı Kayıt API'sı
 
