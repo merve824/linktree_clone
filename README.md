@@ -1,4 +1,4 @@
-linktree_clone
+LİNKTREE_CLONE
 
 "Bu proje ,kullanıcıların tek bir bağlantı altında  birden fazla bağlantıyı sağlayan bir Linktree klonudur."
 
@@ -8,7 +8,7 @@ Proje Türü: Web Uygulaması, Sosyal Medya Aracı
 
 Referans: [Linktree](https://linktr.ee/)
 
-Grup adı:LinkHub
+Grup adı: LinkHub
 
 Proje Ekibi: Merve Sürücü
 
