@@ -8,13 +8,13 @@ MERVE SÜRÜCÜ DURUM SENARYOSU
 
 4.Bağlantı Ekleme Senaryosu
 
-5.BAğlantı Sİlme Senayosu
+5.Bağlantı Sİlme Senayosu
 
 6.Bağlantı Düzenleme Senaryosu
 
 7.Bağlantı Tıklama Sayıları Senaryosu
 
-8.
+8.Bildirim Alma Senaryosu
 
 
 
