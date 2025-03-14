@@ -6,7 +6,7 @@ Bu proje, kullanıcıların tek bir bağlantı altında birden fazla bağlantıy
 
 Proje Türü: Web Uygulaması, Sosyal Medya Aracı
 
-Referans: Linktree (linktr.ee)
+Referans: Lhttps://linktr.ee/
 
 Grup adı:LinkHub
 
