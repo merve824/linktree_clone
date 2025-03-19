@@ -14,11 +14,11 @@ GEREKSİNİMLER
 11. Bağlantı Düzenleme(Merve Sürücü)
 12. Bağlantı Silme(Merve SÜrücü)
 13. Sosyal Medya Bağlantıları Ekleme(Merve Sürücü)
-14.Sosyal Medya ikonları Otomatik Getirme (Merve Sürücü)
+14. Sosyal Medya ikonları Otomatik Getirme (Merve Sürücü)
 16. Analitikler(Bağlantı Tıklama Sayıları)(Merve Sürücü)
 17. Analitikler(En Popüler Bağlantılar)(Merve Sürücü)
 18. Analitikler(Günlük ,Haftalık ve Aylık istatistikler)(Merve Sürücü)
-19. Mobil Uyumluluk(Responsive Tasarım)(Merve SÜrücü)
+19. Mobil Uyumluluk(Responsive Tasarım)(Merve Sürücü)
 
 
 
