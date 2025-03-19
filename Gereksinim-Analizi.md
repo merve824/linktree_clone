@@ -21,9 +21,11 @@ GEREKSİNİMLER
 18. Analitikler(En Popüler Bağlantılar)(Merve Sürücü)
 19. Analitikler(Günlük ,Haftalık ve Aylık istatistikler)(Merve Sürücü)
 20. Mobil Uyumluluk(Responsive Tasarım)(Merve Sürücü)
+    
 
 
-
+GEREKSİNİM DAĞILMLARI
+---
 
 
 
