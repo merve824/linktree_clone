@@ -27,7 +27,7 @@ GEREKSİNİMLER
 GEREKSİNİM DAĞILIMLARI
 ---
 
-[Merve Sürücü'nün Gereksinimleri]<Merve -Sürücü-Gereksinimler.md>
+[Merve Sürücü'nün Gereksinimleri](Merve -Sürücü-Gereksinimler.md)
 
 
 
