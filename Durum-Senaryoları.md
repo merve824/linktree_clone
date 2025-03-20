@@ -1,20 +1,25 @@
-MERVE SÜRÜCÜ DURUM SENARYOSU 
+Linktree Uygulaması Durum Senaryoları
+---
 
 1.Kullanıcı kaydı senaryosu
 
 2.Kullanıcı girişi senaryosu
 
-3.Profil Düzenleme Senaryosu
+3.Kullanıcı çıkış senaryosu
 
-4.Bağlantı Ekleme Senaryosu
+4.Profil oluşturma,düzenleme ve silme  senaryoları
 
-5.Bağlantı Sİlme Senayosu
+5.Tema renk ve yazı tipi seçimi senaryosu
 
-6.Bağlantı Düzenleme Senaryosu
+6.Bağlantı ekleme ,düzenleme ve silme senaryoları
 
-7.Bağlantı Tıklama Sayıları Senaryosu
+7.Bağlantı tıklama sayıları senaryosu
 
-8.Bildirim Alma Senaryosu
+8.Analitikler(Günlük,haftalık ve aylık istatistik  ve en popüler tıklanma senaryoları)
+
+9.Mobil uyumluluk senaryosu
+
+8.Bildirim alma senaryosu
 
 
 
