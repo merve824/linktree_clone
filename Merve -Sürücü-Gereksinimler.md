@@ -15,7 +15,7 @@ Maille kayıt olma, kullanıcıların yeni bir hesap oluştururken e-posta adres
 ---
 Telefonla kayıt olma, kullanıcıların yeni hesap oluştururken telefon numaralarını kullanmalarını sağlar. Kullanıcılara bir doğrulama kodu gönderilir ve hesaplarını etkinleştirebilmeleri için bu kodu girmeleri gerekir. Bu yöntem, kullanıcıların gerçek ve doğrulanmış telefon numaralarıyla kaydolmasını sağlayarak güvenlik seviyesini artırır.
 
-5.Sosyal Medya Hesapları iLe Giriş Yapma
+5. Sosyal Medya Hesapları iLe Giriş Yapma
 ---
 Sosyal medya hesaplarıile giriş yapma(Facebook,google,twitter vb.) hesaplarını kullanarak platformumuza hızlı ve kolay bir şekilde erişim sağlamalarına olanak sağlar.
 Bu yöntem ile kullanıcı yeni bir hesap oluşturma ve ve şifre hatırlama zahmetinden kurtulmalarını sağlar.
@@ -40,7 +40,7 @@ Profil düzenleme, kullanıcıların mevcut profillerindeki bilgileri değiştir
 ---
 Profil silme, kullanıcıların platformumuzdaki profillerini kalıcı olarak silmelerini sağlar. Bu işlem geri alınamaz.
 
-11.Profile Resim/Logo Ekleme
+11. Profile Resim/Logo Ekleme
 ---
 Profile resim/logo ekleme, kullanıcıların profillerine görsel bir kimlik kazandırmalarını sağlar. Bu, kullanıcıların profillerini daha çekici ve kişisel hale getirir.
 
