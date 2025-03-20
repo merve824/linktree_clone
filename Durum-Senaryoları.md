@@ -19,7 +19,7 @@ Linktree Uygulaması Durum Senaryoları
 
 9.Mobil uyumluluk senaryosu
 
-8.Bildirim alma senaryosu
+10.Bildirim alma senaryosu
 
 
 
