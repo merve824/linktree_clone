@@ -1,1 +1,1 @@
-[durum_diyagramı](durum_diyagramı.png)
+[Durum_diyagramı](durum_diyagramı.png)
