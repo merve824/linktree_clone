@@ -22,4 +22,4 @@ Linktree Clone
 
 
 
-[Durum_diyagramı](https://github.com/merve824/linktree_clone/blob/6e7e80e9045ecb3bf7837384523bddd73b48b23a/durum_diyagram%C4%B1.png)
+[Durum_diyagramı](merve_durum_diyagramı.png)
