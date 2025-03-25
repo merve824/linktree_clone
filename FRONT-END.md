@@ -1,4 +1,5 @@
 MERVE SÜRÜCÜ FRONT-END 
+---
 
 1.Kullanıcı Kayıt oluşturma
 
@@ -10,4 +11,6 @@ MERVE SÜRÜCÜ FRONT-END
 
 5.Güvenlik(yetkilendirme ve kimlik doğrulama)
 
-6.Mobil Uyumluluk
+6.Kullanıcı Çıkışı
+
+7.Mobil Uyumluluk
