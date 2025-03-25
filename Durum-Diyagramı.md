@@ -9,9 +9,10 @@ Linktree Clone
 
 4.Devre dışı bırakma
 
-5.Profil oluşturma,düzenleme silme ve resim yükleme 
+5.Ayarlar
 
-6.Ayarlar
+6.Profil oluşturma, düzenleme, silme ve resim yükleme 
+
 
 
 
