@@ -7,13 +7,13 @@ Linktree Clone
 
 3.Çıkış Yapma
 
-4.Profil oluşturma,düzenleme ve silme 
+4.Devre dışı bırakma
 
-5.Sosyal Medya hesabı Yönetme
+5.Profil oluşturma,düzenleme silme ve resim yükleme 
 
-6.Bağlantı ekleme ,düzenleme ve silme 
+6.Ayarlar
 
-7.Devre Dışı Bırakma
+
 
 
 
