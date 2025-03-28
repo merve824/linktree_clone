@@ -1,4 +1,4 @@
-[durum_senaryosu.pdf](https://github.com/merve824/linktree_clone/blob/merve824-patch/senaryolar-merve.pdf)  
+[merve_durum_senaryoları.pdf](https://github.com/user-attachments/files/19511312/senaryolar-merve.pdf)
 
 
 
