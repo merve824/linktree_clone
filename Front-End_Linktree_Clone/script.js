@@ -96,25 +96,6 @@ function addProfile() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const btnTogglePopup = document.querySelector('.btnLogin-popup'); 
 const coverBox = document.querySelector('.cover_box');
 const loginLink = document.querySelector('.login-link');
@@ -141,3 +122,22 @@ registerLink.addEventListener('click', activateCoverBox);
 loginLink.addEventListener('click', deactivateCoverBox);
 btnTogglePopup.addEventListener('click', activatePopup);
 iconClose.addEventListener('click', deactivatePopup);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
