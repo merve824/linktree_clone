@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linktree Clone</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+</head>
+    <body>
+         <header>
+                <div class="navigation">
+                <input type="checkbox" id="check">
+                <label for="check" class="check_btn">
+                <i class="fa fa-bars"></i>
+</label>
+      <label class="logo">Linktree Clone</label>
+       <ul>
+
+    <li>
+        <a href="#" onclick="toggleProfileOptions()">Profil</a>
+        <ul id="profile-options" class="profile-options">
+            <li class="option" onclick="editProfile()">Profil Düzenle</li>
+            <li class="option" onclick="deleteProfile()">Profil Sil</li>
+            <li class="option" onclick="addProfile()">Profil Ekle</li>
+        </ul>
+    </li>
+
+        <li><a href="#">Ayarlar</a>
+            <ul class="submenu">
+                <li><a href="#" id="disableAccount">Hesabı Devre Dışı Bırak</a></li>
+                <li><a href="#" id="logout">Çıkış Yap</a></li>
+            </ul>
+        </li>
+        <li><button class="btnLogin-popup">Giriş Yap</button></li>
+       </ul>
+   </div>
+   <div id="message"></div>
+</header>
+
+<div class="cover_box">
+    <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+    <div class="form-box login">
+    <h2>Giriş Yap</h2>
+
+        <form action="#">
+
+    <div class="input-box">
+        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+        <input type="email" required>
+        <label>Email</label>
+    </div>
+
+    <div class="input-box">
+        <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+        <input type="tel" required>
+        <label>Telefon</label>
+    </div>
+
+    <div class="input-box">
+       <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+       <input type="password" required>
+       <label>Şifre</label>
+    
+    </div>
+
+    <div class="remember-forgot"> 
+         <label><input type="checkbox">Beni Hatırla?</label>
+        <a href="#">Şifreyi mi unuttunuz?</a>
+    </div>
+
+    
+        <button type="submit" class="btn">Giriş Yap</button>
+        <div class="login-register">
+        <p>Hesabınız yok mu? <a href="#" class="register-link">Kayıt Ol</a></p>
+    </div>
+  </form>
+</div>
+
+
+
+<div class="form-box register">
+    <h2>Kayıt Ol</h2>
+
+        <form action="#">
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                <input type="text" required>
+                <label>Kullanıcı</label>
+            </div>
+
+    <div class="input-box">
+        <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+        <input type="email" required>
+        <label>Email</label>
+    </div>
+
+    <div class="input-box">
+        <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
+        <input type="tel" required>
+        <label>Telefon</label>
+    </div>
+    
+    <div class="input-box">
+       <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+       <input type="password" required>
+       <label>Şifre</label>
+    
+    </div>
+
+    <div class="remember-forgot"> 
+         <label><input type="checkbox">Şartları kabul ediyor musunuz?</label>
+        <a href="#">Şifreyi mi unuttunuz?</a>
+    </div>
+
+    
+        <button type="submit" class="btn">Kayıt Ol</button>
+        <div class="login-register">
+        <p>Zaten bir hesabınız var mı? <a href="#" class="login-link">Giriş Yap</a></p>
+
+       </div>
+  </form>
+</div>
+
+
+    
+
+
+
+
+</div>
+    
+    
+    
+        
+
+<script src="script.js"></script>   
+<script type = module  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>   
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
