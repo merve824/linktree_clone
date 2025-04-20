@@ -1,16 +1,25 @@
+Linktree Clone Domain Adresi mylinkhub.store
+
 MERVE SÜRÜCÜ FRONT-END 
 ---
 
-1.Kullanıcı Kayıt oluşturma
+1.Kullanıcı Maille Kayıt Olma
 
-2.Kullanıcı Girişi
+2.Kullanıcı Telefonla Kayıt Olma
 
-3.Profil oluşturma ve güncelleme
+3.Kullanıcı Maille Giriş Yapma
 
-4.Bağlantı ekleme ,düzenleme ve silme
+4.Kullanıcı Telefonla Giriş Yapma
 
-5.Güvenlik(yetkilendirme ve kimlik doğrulama)
+5.Hesabı Devre Dışı  Bırakma
 
-6.Kullanıcı Çıkışı
+6.Hesaptan Çıkma
 
-7.Mobil Uyumluluk
+7.Profil Düzenleme
+
+8.Profil  Silme
+
+9.Profil Ekleme
+
+10.Ayarlar
+
