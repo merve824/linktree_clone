@@ -6,9 +6,10 @@ Bu proje, kullanıcıların tek bir bağlantı altında birden fazla bağlantıy
 
 Proje Türü: Web Uygulaması, Sosyal Medya Aracı
 
+
 Referans: [Linktree](https://linktr.ee/)
 
-Uygulama Adresi:https://mylinkhub.store/
+Uygulama Adresi: https://mylinkhub.store/
 
 Grup adı: LinkHub
 
