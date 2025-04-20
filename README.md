@@ -8,6 +8,8 @@ Proje Türü: Web Uygulaması, Sosyal Medya Aracı
 
 Referans: [Linktree](https://linktr.ee/)
 
+Uygulama Adresi:https://mylinkhub.store/
+
 Grup adı: LinkHub
 
 Proje Ekibi: Merve Sürücü
