@@ -37,19 +37,19 @@ export default async function Header() {
                 <nav className="flex items-center gap-4 text-sm text-slate-500">
                     {isLoggedIn ? (
                         <>
+                            <Link href={'/account'} className="font-semibold">
+                                Hello, asd
+                            </Link>
+                            <LogoutButton />
+                        </>
+                    ) : (
+                        <>
                             <Link href={'/login'} className="font-semibold">
                                 Giriş Yap
                             </Link>
                             <Link href={'/register'} className="font-semibold">
                                 Kayıt Ol
                             </Link>
-                        </>
-                    ) : (
-                        <>
-                            <Link href={'/account'} className="font-semibold">
-                                Hello, asd
-                            </Link>
-                            <LogoutButton />
                         </>
                     )}
                 </nav>
