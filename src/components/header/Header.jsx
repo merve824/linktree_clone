@@ -1,7 +1,7 @@
 import LogoutButton from '../buttons/LogoutButton';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { PRIMARY_COLOR } from '../../../../lib/constants';
+import { PRIMARY_COLOR } from '../../../lib/constants';
 import Link from 'next/link';
 
 export default async function Header() {

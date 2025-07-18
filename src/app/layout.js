@@ -1,5 +1,5 @@
 import './globals.css';
-import Header from './components/header/Header';
+import Header from '../components/header/Header';
 import { Inter } from 'next/font/google';
 
 export const metadata = {

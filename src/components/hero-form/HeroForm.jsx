@@ -1,6 +1,6 @@
 'use client';
 
-import { PRIMARY_COLOR } from '../../../../lib/constants';
+import { PRIMARY_COLOR } from '../../../lib/constants';
 
 export default function HeroForm() {
     async function handleSubmit(ev) {
