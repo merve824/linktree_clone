@@ -1,5 +1,6 @@
 import './globals.css';
 import Header from '../components/header/Header';
+import Providers from './providers';
 import { Inter } from 'next/font/google';
 
 export const metadata = {
@@ -17,8 +18,10 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" className={inter.variable}>
             <body>
-                <Header />
-                <main className="min-h-screen">{children}</main>
+                <Providers>
+                    <Header />
+                    <main className="min-h-screen">{children}</main>
+                </Providers>
             </body>
         </html>
     );

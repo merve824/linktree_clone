@@ -9,8 +9,10 @@ export default function Register() {
         email: '',
         phone: '',
         password: '',
+        confirmPassword: '',
     });
     const [submitted, setSubmitted] = useState(false);
+    const [error, setError] = useState('');
 
     function handleInputChange(e) {
         setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -18,6 +20,11 @@ export default function Register() {
 
     function handleSubmit(e) {
         e.preventDefault();
+
+        if (formData.password !== formData.confirmPassword) {
+            setError('Şifreler eşleşmiyor.');
+            return;
+        }
 
         const dataToSubmit = {
             method: activeTab,
@@ -27,6 +34,7 @@ export default function Register() {
 
         console.log('Kayıt verisi:', dataToSubmit);
         setSubmitted(true);
+        setError('');
     }
 
     return (
@@ -69,6 +77,12 @@ export default function Register() {
                 </div>
             )}
 
+            {error && (
+                <div className="mb-4 p-4 bg-red-100 text-red-800 rounded">
+                    {error}
+                </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-6">
                 {activeTab === 'email' && (
                     <div>
@@ -85,7 +99,7 @@ export default function Register() {
                             required
                             value={formData.email}
                             onChange={handleInputChange}
-                            placeholder="ornek@domain.com"
+                            placeholder="ornek@mail.com"
                             className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
                         />
                     </div>
@@ -128,6 +142,26 @@ export default function Register() {
                         value={formData.password}
                         onChange={handleInputChange}
                         placeholder="En az 8 karakter"
+                        className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
+                    />
+                </div>
+
+                <div>
+                    <label
+                        htmlFor="confirmPassword"
+                        className="block mb-2 font-semibold"
+                    >
+                        Şifre Tekrar
+                    </label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        required
+                        minLength={6}
+                        value={formData.confirmPassword}
+                        onChange={handleInputChange}
+                        placeholder="Şifrenizi tekrar girin"
                         className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
                     />
                 </div>
