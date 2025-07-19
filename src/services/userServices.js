@@ -46,4 +46,13 @@ const chooseUsername = async (data, token) => {
     }
 };
 
-export { getUsername, chooseUsername, preChooseUsername };
+const getUserProfile = async (username) => {
+    try {
+        const response = await axios.get(`${USER_API}/profile/${username}`);
+        return response.data;
+    } catch (error) {
+        // err
+    }
+};
+
+export { getUsername, chooseUsername, preChooseUsername, getUserProfile };

@@ -20,7 +20,7 @@ export default function LogoutButton({
                     className={iconClasses}
                 />
             )}
-            <span className="text-white">Logout</span>
+            <span className="text-white">Çıkış Yap</span>
             {!iconLeft && (
                 <FontAwesomeIcon
                     icon={faRightFromBracket}

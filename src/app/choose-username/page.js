@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { PRIMARY_COLOR } from '../../../lib/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { preChooseUsername } from '@/services/userServices';
@@ -20,6 +20,10 @@ export default function UsernameForm() {
 
     const [username, setUsername] = useState(registrationUsername);
     const [taken, setTaken] = useState('');
+
+    useEffect(() => {
+        setUsername(registrationUsername);
+    }, [registrationUsername]);
 
     async function handleSubmit() {
         let data;
@@ -63,8 +67,7 @@ export default function UsernameForm() {
                 <input
                     name="username"
                     className="block p-2 mx-auto border w-full mb-2 text-center rounded-md focus:outline-none focus:ring-2 focus:ring-green-800"
-                    defaultValue={username}
-                    value={username}
+                    value={username || ''}
                     type="text"
                     onChange={(e) => {
                         setUsername(e.target.value);

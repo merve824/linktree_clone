@@ -8,8 +8,21 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getUsername } from '@/services/userServices';
+import { usePathname } from 'next/navigation';
+
+const showHeaderPaths = [
+    '/',
+    '/about',
+    '/pricing',
+    '/contact',
+    '/login',
+    '/register',
+    '/verify',
+    '/choose-username',
+];
 
 export default function Header() {
+    const pathname = usePathname();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState('');
 
@@ -30,6 +43,10 @@ export default function Header() {
             handleUsername();
         }
     }, [token]);
+
+    const hideHeader = showHeaderPaths.includes(pathname);
+
+    if (!hideHeader) return null;
 
     return (
         <header className="bg-white border-b py-4">
