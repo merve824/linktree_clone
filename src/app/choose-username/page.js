@@ -8,6 +8,7 @@ import {
     setRegistrationEmail,
     setRegistrationPhone,
 } from '../../../lib/slices/userSlice';
+import { hideLoading, showLoading } from '../../../lib/slices/loadingSlice';
 
 export default function UsernameForm() {
     const dispatch = useDispatch();
@@ -41,16 +42,19 @@ export default function UsernameForm() {
             return;
         }
 
+        dispatch(showLoading());
         try {
             await preChooseUsername(data, token);
             dispatch(setRegistrationEmail(''));
             dispatch(setRegistrationPhone(''));
             localStorage.removeItem('registrationEmail');
             localStorage.removeItem('registrationPhone');
-
+            localStorage.removeItem('registrationUsername');
             window.location.href = '/';
         } catch (error) {
             setTaken(error);
+        } finally {
+            dispatch(hideLoading());
         }
     }
 

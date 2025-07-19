@@ -5,6 +5,7 @@ import { PRIMARY_COLOR } from '../../../lib/constants';
 import { useDispatch } from 'react-redux';
 import { login } from '@/services/authServices';
 import { setToken } from '../../../lib/slices/userSlice';
+import { hideLoading, showLoading } from '../../../lib/slices/loadingSlice';
 
 export default function Login() {
     const [activeTab, setActiveTab] = useState('email');
@@ -38,6 +39,7 @@ export default function Login() {
             };
         }
 
+        dispatch(showLoading());
         try {
             const reponse = await login(data);
             setSubmitted(true);
@@ -51,6 +53,8 @@ export default function Login() {
         } catch (error) {
             setError(error);
             setSubmitted(false);
+        } finally {
+            dispatch(hideLoading());
         }
     }
 

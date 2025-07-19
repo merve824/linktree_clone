@@ -9,6 +9,7 @@ import {
     setRegistrationEmail,
     setRegistrationPhone,
 } from '../../../lib/slices/userSlice';
+import { hideLoading, showLoading } from '../../../lib/slices/loadingSlice';
 
 export default function Register() {
     const [activeTab, setActiveTab] = useState('email');
@@ -53,6 +54,7 @@ export default function Register() {
         }
 
         setError('');
+        dispatch(showLoading());
 
         try {
             await register(data);
@@ -74,6 +76,8 @@ export default function Register() {
         } catch (error) {
             setError(error);
             setSubmitted(false);
+        } finally {
+            dispatch(hideLoading());
         }
     }
 

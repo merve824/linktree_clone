@@ -5,6 +5,7 @@ import { PRIMARY_COLOR } from '../../../lib/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { resendRegistrationOTP, verifyOTP } from '@/services/authServices';
 import { setRegistrationEmail } from '../../../lib/slices/userSlice';
+import { hideLoading, showLoading } from '../../../lib/slices/loadingSlice';
 
 export default function OTPVerify() {
     const [otp, setOtp] = useState('');
@@ -47,6 +48,7 @@ export default function OTPVerify() {
     const handleVerify = async (e) => {
         e.preventDefault();
 
+        dispatch(showLoading());
         try {
             await verifyOTP({ otp, email: registrationEmail });
             setVerified(true);
@@ -55,6 +57,8 @@ export default function OTPVerify() {
             }, 2000);
         } catch (error) {
             setError(error);
+        } finally {
+            dispatch(hideLoading());
         }
     };
 

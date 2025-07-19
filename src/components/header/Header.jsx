@@ -19,6 +19,7 @@ const showHeaderPaths = [
     '/register',
     '/verify',
     '/choose-username',
+    '/account',
 ];
 
 export default function Header() {
