@@ -19,7 +19,6 @@ const showHeaderPaths = [
     '/register',
     '/verify',
     '/choose-username',
-    '/account',
 ];
 
 export default function Header() {
@@ -50,7 +49,7 @@ export default function Header() {
     if (!hideHeader) return null;
 
     return (
-        <header className="bg-white border-b py-4">
+        <header className="bg-white border-b border-gray-300  py-4">
             <div className="max-w-4xl flex justify-between mx-auto px-6">
                 <div className="flex items-center gap-6">
                     <Link

@@ -55,4 +55,37 @@ const getUserProfile = async (username) => {
     }
 };
 
-export { getUsername, chooseUsername, preChooseUsername, getUserProfile };
+const getAccountDetails = async (token) => {
+    try {
+        const response = await axios.get(`${USER_API}/account-details`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response?.data?.message;
+    }
+};
+
+const updateProfile = async (data, token) => {
+    try {
+        const reponse = await axios.put(`${USER_API}/update-profile`, data, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+        return reponse.data;
+    } catch (error) {
+        throw error.response?.data?.message;
+    }
+};
+
+export {
+    getUsername,
+    chooseUsername,
+    preChooseUsername,
+    getUserProfile,
+    getAccountDetails,
+    updateProfile,
+};
