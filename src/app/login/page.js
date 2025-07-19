@@ -2,6 +2,9 @@
 
 import { useState } from 'react';
 import { PRIMARY_COLOR } from '../../../lib/constants';
+import { useDispatch } from 'react-redux';
+import { login } from '@/services/authServices';
+import { setToken } from '../../../lib/slices/userSlice';
 
 export default function Login() {
     const [activeTab, setActiveTab] = useState('email');
@@ -11,22 +14,44 @@ export default function Login() {
         password: '',
     });
     const [submitted, setSubmitted] = useState(false);
+    const [error, setError] = useState(null);
+
+    const dispatch = useDispatch();
 
     function handleInputChange(e) {
         setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
-        const dataToSubmit = {
-            method: activeTab,
-            identifier: activeTab === 'email' ? formData.email : formData.phone,
-            password: formData.password,
-        };
+        let data;
+        if (activeTab === 'email') {
+            data = {
+                email: formData.email,
+                password: formData.password,
+            };
+        } else {
+            data = {
+                phone: formData.phone,
+                password: formData.password,
+            };
+        }
 
-        console.log('Kayıt verisi:', dataToSubmit);
-        setSubmitted(true);
+        try {
+            const reponse = await login(data);
+            setSubmitted(true);
+            dispatch(setToken(reponse.token));
+            localStorage.setItem('token', reponse.token);
+            setError(null);
+
+            setTimeout(() => {
+                window.location.href = '/account';
+            }, 2000);
+        } catch (error) {
+            setError(error);
+            setSubmitted(false);
+        }
     }
 
     return (
@@ -65,11 +90,16 @@ export default function Login() {
 
             {submitted && (
                 <div className="mb-4 p-4 bg-green-100 text-green-800 rounded">
-                    Kaydınız başarıyla alındı!
+                    Giriş başarılı! Yönlendiriliyorsunuz...
                 </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-6">
+                {error && (
+                    <div className="mb-4 p-4 bg-red-100 text-red-800 rounded">
+                        {error}
+                    </div>
+                )}
                 {activeTab === 'email' && (
                     <div>
                         <label

@@ -2,6 +2,13 @@
 
 import { useState } from 'react';
 import { PRIMARY_COLOR } from '../../../lib/constants';
+import { register } from '@/services/authServices';
+import { useRouter } from 'next/navigation';
+import { useDispatch } from 'react-redux';
+import {
+    setRegistrationEmail,
+    setRegistrationPhone,
+} from '../../../lib/slices/userSlice';
 
 export default function Register() {
     const [activeTab, setActiveTab] = useState('email');
@@ -14,11 +21,14 @@ export default function Register() {
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState('');
 
+    const router = useRouter();
+    const dispatch = useDispatch();
+
     function handleInputChange(e) {
         setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     }
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault();
 
         if (formData.password !== formData.confirmPassword) {
@@ -26,15 +36,45 @@ export default function Register() {
             return;
         }
 
-        const dataToSubmit = {
-            method: activeTab,
-            identifier: activeTab === 'email' ? formData.email : formData.phone,
-            password: formData.password,
-        };
+        const { email, phone, password } = formData;
 
-        console.log('Kayıt verisi:', dataToSubmit);
-        setSubmitted(true);
+        let data;
+
+        if (activeTab === 'email') {
+            data = {
+                email,
+                password,
+            };
+        } else {
+            data = {
+                phone,
+                password,
+            };
+        }
+
         setError('');
+
+        try {
+            await register(data);
+            setSubmitted(true);
+
+            if (activeTab === 'email') {
+                dispatch(setRegistrationEmail(email));
+                setTimeout(() => {
+                    localStorage.setItem('registrationEmail', email);
+                    router.push('/verify');
+                }, 2000);
+            } else {
+                dispatch(setRegistrationPhone(phone));
+                setTimeout(() => {
+                    localStorage.setItem('registrationPhone', phone);
+                    router.push('/choose-username');
+                }, 2000);
+            }
+        } catch (error) {
+            setError(error);
+            setSubmitted(false);
+        }
     }
 
     return (

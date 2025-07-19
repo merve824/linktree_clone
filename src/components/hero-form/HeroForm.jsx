@@ -1,14 +1,25 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { PRIMARY_COLOR } from '../../../lib/constants';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setRegistrationUsername } from '../../../lib/slices/userSlice';
 
 export default function HeroForm() {
+    const [username, setUsername] = useState('');
+
+    const router = useRouter();
+    const dispatch = useDispatch();
+
     async function handleSubmit(ev) {
         ev.preventDefault();
-        const form = ev.target;
-        const input = form.querySelector('input');
-        const username = input.value;
-        alert(username);
+
+        setTimeout(() => {
+            localStorage.setItem('registrationUsername', username);
+            dispatch(setRegistrationUsername(username));
+            router.push('/register');
+        }, 1000);
     }
     return (
         <form
@@ -24,12 +35,14 @@ export default function HeroForm() {
                     marginBottom: 0,
                     paddingLeft: 0,
                 }}
+                onChange={(e) => setUsername(e.target.value)}
                 placeholder="kullanıcı adı"
             />
             <button
                 type="submit"
                 className=" text-white py-4 px-6 whitespace-nowrap rounded-r-xl"
                 style={{ backgroundColor: PRIMARY_COLOR }}
+                disabled={username.length < 3}
             >
                 Ücretsiz Başla!
             </button>

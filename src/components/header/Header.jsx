@@ -1,11 +1,35 @@
+'use client';
+
 import LogoutButton from '../buttons/LogoutButton';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PRIMARY_COLOR } from '../../../lib/constants';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { getUsername } from '@/services/userServices';
 
-export default async function Header() {
-    const isLoggedIn = false;
+export default function Header() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [username, setUsername] = useState('');
+
+    const { token } = useSelector((state) => state.user);
+
+    useEffect(() => {
+        const handleUsername = async () => {
+            try {
+                const { username } = await getUsername(token);
+                setUsername(username);
+            } catch (error) {
+                // errr
+            }
+        };
+
+        if (token) {
+            setIsLoggedIn(true);
+            handleUsername();
+        }
+    }, [token]);
 
     return (
         <header className="bg-white border-b py-4">
@@ -38,7 +62,7 @@ export default async function Header() {
                     {isLoggedIn ? (
                         <>
                             <Link href={'/account'} className="font-semibold">
-                                Hello, asd
+                                Merhaba, {username}
                             </Link>
                             <LogoutButton />
                         </>
