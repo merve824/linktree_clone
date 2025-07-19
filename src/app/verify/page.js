@@ -99,7 +99,7 @@ export default function OTPVerify() {
                             maxLength={6}
                             value={otp}
                             onChange={handleChange}
-                            className="text-center text-2xl tracking-widest w-full border border-gray-300 rounded px-3 py-2"
+                            className="text-center shadow-md text-2xl tracking-widest w-full border border-gray-300 rounded px-3 py-2"
                             placeholder="••••••"
                             style={{ borderColor: PRIMARY_COLOR }}
                         />

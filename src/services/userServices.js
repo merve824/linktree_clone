@@ -81,6 +81,86 @@ const updateProfile = async (data, token) => {
     }
 };
 
+const getSocialMediaLinks = async (token) => {
+    try {
+        const response = await axios.get(`${USER_API}/social-links`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response?.data?.message;
+    }
+};
+
+const updateSocialLinks = async (data, token) => {
+    try {
+        const reponse = await axios.put(
+            `${USER_API}/update-social-links`,
+            data,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            }
+        );
+        return reponse.data;
+    } catch (error) {
+        throw error.response?.data?.message;
+    }
+};
+
+const getCustomLinks = async (token) => {
+    try {
+        const response = await axios.get(`${USER_API}/custom-links`, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response?.data?.message;
+    }
+};
+
+const addCustomLink = async (data, token) => {
+    try {
+        const reponse = await axios.post(`${USER_API}/custom-links`, data, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+        return reponse.data;
+    } catch (error) {
+        throw error.response?.data?.message;
+    }
+};
+
+const updateCustomLink = async (data, token) => {
+    try {
+        const reponse = await axios.put(`${USER_API}/custom-links`, data, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+            },
+        });
+        return reponse.data;
+    } catch (error) {
+        throw error.reponse?.data?.message;
+    }
+};
+
+const deleteCustomLink = async (id, token) => {
+    try {
+        const reponse = await axios.delete(`${USER_API}/custom-links/${id}`, {
+            headers: { Authorization: `Bearer ${token}` },
+        });
+        return reponse.data;
+    } catch (error) {
+        throw error.reponse.data.messages;
+    }
+};
+
 export {
     getUsername,
     chooseUsername,
@@ -88,4 +168,10 @@ export {
     getUserProfile,
     getAccountDetails,
     updateProfile,
+    updateSocialLinks,
+    getSocialMediaLinks,
+    getCustomLinks,
+    addCustomLink,
+    updateCustomLink,
+    deleteCustomLink,
 };

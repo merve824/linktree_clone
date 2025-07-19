@@ -120,7 +120,7 @@ export default function Login() {
                             value={formData.email}
                             onChange={handleInputChange}
                             placeholder="ornek@domain.com"
-                            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
+                            className="w-full border shadow-md border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
                         />
                     </div>
                 )}
@@ -141,7 +141,7 @@ export default function Login() {
                             value={formData.phone}
                             onChange={handleInputChange}
                             placeholder="+90 5xx xxx xx xx"
-                            className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
+                            className="w-full border shadow-md border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
                         />
                     </div>
                 )}
@@ -162,7 +162,7 @@ export default function Login() {
                         value={formData.password}
                         onChange={handleInputChange}
                         placeholder="En az 8 karakter"
-                        className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
+                        className="w-full shadow-md border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
                     />
                 </div>
 

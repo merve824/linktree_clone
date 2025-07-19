@@ -70,7 +70,7 @@ export default function UsernameForm() {
             <div className="max-w-xs mx-auto">
                 <input
                     name="username"
-                    className="block p-2 mx-auto border w-full mb-2 text-center rounded-md focus:outline-none focus:ring-2 focus:ring-green-800"
+                    className="block shadow-md p-2 mx-auto border w-full mb-2 text-center rounded-md focus:outline-none focus:ring-2 focus:ring-green-800"
                     value={username || ''}
                     type="text"
                     onChange={(e) => {

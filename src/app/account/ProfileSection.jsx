@@ -13,7 +13,8 @@ export default function ProfileSection({ user, handleSave }) {
     const [formData, setFormData] = useState({
         fullName: user.fullName || '',
         bio: user.bio || '',
-        location: user.location || '', // user.location varsa diye ekledim, yoksa boş
+        location: user.location || '',
+        username: user.username || '',
     });
 
     useEffect(() => {
@@ -23,9 +24,10 @@ export default function ProfileSection({ user, handleSave }) {
                 'https://img.freepik.com/premium-vektor/account-icon-user-icon-vector-graphics_292645-552.jpg'
         );
         setFormData({
-            fullName: user.fullname || '',
+            fullname: user.fullname || '',
             bio: user.bio || '',
             location: user.location || '',
+            username: user.username || '',
         });
     }, [user]);
 
@@ -67,12 +69,14 @@ export default function ProfileSection({ user, handleSave }) {
     };
 
     const handleSubmit = (e) => {
+        setError('');
         e.preventDefault();
 
         const userData = {
-            fullName: formData.fullName,
+            fullname: formData.fullname,
             bio: formData.bio,
             location: formData.location,
+            username: formData.username,
             headerUrl: headerPreview,
             avatarUrl: avatarPreview,
         };
@@ -163,11 +167,11 @@ export default function ProfileSection({ user, handleSave }) {
                             </label>
                             <input
                                 type="text"
-                                id="fullName"
-                                name="fullName"
-                                value={formData.fullName}
+                                id="fullname"
+                                name="fullname"
+                                value={formData.fullname}
                                 onChange={handleChange}
-                                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
+                                className="w-full border shadow-md border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
                                 placeholder="Adınız Soyadınız"
                             />
                         </div>
@@ -184,9 +188,31 @@ export default function ProfileSection({ user, handleSave }) {
                                 value={formData.bio}
                                 onChange={handleChange}
                                 rows={4}
-                                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
+                                className="w-full border shadow-md border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
                                 placeholder="Kendinizden kısaca bahsedin"
                             />
+                        </div>
+                        <div>
+                            <label
+                                htmlFor="username"
+                                className="block mb-1 font-medium"
+                            >
+                                Kullanıcı Adı
+                            </label>
+                            <div className="flex shadow-md items-center border border-gray-300 rounded overflow-hidden focus-within:ring-2 focus-within:ring-[#3E5F44]">
+                                <span className="px-3 text-gray-600 text-sm">
+                                    mylinkhub.to/
+                                </span>
+                                <input
+                                    type="text"
+                                    id="username"
+                                    name="username"
+                                    value={formData.username}
+                                    onChange={handleChange}
+                                    className="flex-1 px-3 py-2 outline-none"
+                                    placeholder="kullaniciadi"
+                                />
+                            </div>
                         </div>
                         <div>
                             <label
@@ -201,7 +227,7 @@ export default function ProfileSection({ user, handleSave }) {
                                 name="location"
                                 value={formData.location}
                                 onChange={handleChange}
-                                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
+                                className="w-full border border-gray-300 shadow-md rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
                                 placeholder="Yaşadığınız şehir veya bölge"
                             />
                         </div>
