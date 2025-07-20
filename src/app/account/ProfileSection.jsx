@@ -9,13 +9,23 @@ export default function ProfileSection({ user, handleSave }) {
             'https://img.freepik.com/premium-vektor/account-icon-user-icon-vector-graphics_292645-552.jpg'
     );
     const [error, setError] = useState('');
+    const [copied, setCopied] = useState(false);
 
     const [formData, setFormData] = useState({
-        fullName: user.fullName || '',
+        fullname: user.fullname || '',
         bio: user.bio || '',
         location: user.location || '',
         username: user.username || '',
     });
+
+    const handleCopy = () => {
+        if (user.username) {
+            const link = `mylinkhub.to/${user.username}`;
+            navigator.clipboard.writeText(link);
+            setCopied(true);
+            setTimeout(() => setCopied(false), 1500);
+        }
+    };
 
     useEffect(() => {
         setHeaderPreview(user.headerUrl);
@@ -141,13 +151,24 @@ export default function ProfileSection({ user, handleSave }) {
                     </div>
                     <div>
                         <h2 className="text-xl font-semibold">
-                            {formData.fullName || 'Ad Soyad'}
+                            {formData.fullname || 'Ad Soyad'}
                         </h2>
-                        <p className="text-gray-600">
-                            {user.username
-                                ? `mylinkhub.to/${user.username}`
-                                : ''}
-                        </p>
+                        <div>
+                            <p
+                                className="text-gray-600 cursor-pointer hover:underline"
+                                onClick={handleCopy}
+                                title="Tıklayarak kopyala"
+                            >
+                                {user.username
+                                    ? `mylinkhub.to/${user.username}`
+                                    : ''}
+                            </p>
+                            {copied && (
+                                <span className="text-green-600 text-sm mt-1 inline-block">
+                                    Kopyalandı!
+                                </span>
+                            )}
+                        </div>
                         <p className="text-gray-600 text-sm mt-2">
                             {formData.bio || 'Biyografi henüz eklenmedi.'}
                         </p>

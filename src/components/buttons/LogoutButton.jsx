@@ -7,6 +7,7 @@ export default function LogoutButton({
     className = 'flex items-center gap-2 border p-2 px-4 shadow rounded-l',
     iconLeft = false,
     iconClasses = 'text-white',
+    signOut,
 }) {
     return (
         <button

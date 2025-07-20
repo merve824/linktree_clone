@@ -6,9 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { PRIMARY_COLOR } from '../../../lib/constants';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getUsername } from '@/services/userServices';
 import { usePathname } from 'next/navigation';
+import { hideLoading, showLoading } from '../../../lib/slices/loadingSlice';
+import { clear } from '../../../lib/slices/userSlice';
 
 const showHeaderPaths = [
     '/',
@@ -27,6 +29,7 @@ export default function Header() {
     const [username, setUsername] = useState('');
 
     const { token } = useSelector((state) => state.user);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         const handleUsername = async () => {
@@ -43,6 +46,26 @@ export default function Header() {
             handleUsername();
         }
     }, [token]);
+
+    const signOut = () => {
+        const confirmed = confirm('Çıkış yapmak istediğinize emin misiniz?');
+
+        if (!confirmed) {
+            return;
+        }
+
+        dispatch(showLoading());
+        dispatch(clear());
+        localStorage.removeItem('token');
+        localStorage.removeItem('registrationEmail');
+        localStorage.removeItem('registrationPhone');
+        localStorage.removeItem('registrationUsername');
+
+        setTimeout(() => {
+            dispatch(hideLoading());
+            window.location.href = '/';
+        }, 2000);
+    };
 
     const hideHeader = showHeaderPaths.includes(pathname);
 
@@ -81,7 +104,7 @@ export default function Header() {
                             <Link href={'/account'} className="font-semibold">
                                 Merhaba, {username}
                             </Link>
-                            <LogoutButton />
+                            <LogoutButton signOut={signOut} />
                         </>
                     ) : (
                         <>

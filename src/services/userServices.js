@@ -161,6 +161,55 @@ const deleteCustomLink = async (id, token) => {
     }
 };
 
+const freezeAccount = async (token) => {
+    try {
+        const response = await axios.put(`${USER_API}/frozen`, null, {
+            headers: { Authorization: `Bearer ${token}` },
+        });
+        return response.data;
+    } catch (error) {
+        throw error.response.data.message;
+    }
+};
+
+const deleteAccount = async (token) => {
+    try {
+        const reponse = await axios.delete(`${USER_API}/account`, {
+            headers: { Authorization: `Bearer ${token}` },
+        });
+        return reponse.data;
+    } catch (error) {
+        throw error.reponse.data.message;
+    }
+};
+
+const changeBackgroundColor = async (token, backgroundColor) => {
+    try {
+        const response = await axios.put(
+            `${USER_API}/background-color`,
+            { backgroundColor },
+            { headers: { Authorization: `Bearer ${token}` } }
+        );
+
+        return response.data;
+    } catch (error) {
+        throw error.reponse.data.message;
+    }
+};
+
+const changeFont = async (token, font) => {
+    try {
+        const response = await axios.put(
+            `${USER_API}/font`,
+            { font },
+            { headers: { Authorization: `Bearer ${token}` } }
+        );
+        return response.data;
+    } catch (error) {
+        throw error.reponse.data.message;
+    }
+};
+
 export {
     getUsername,
     chooseUsername,
@@ -174,4 +223,8 @@ export {
     addCustomLink,
     updateCustomLink,
     deleteCustomLink,
+    freezeAccount,
+    deleteAccount,
+    changeBackgroundColor,
+    changeFont,
 };
