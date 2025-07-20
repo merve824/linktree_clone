@@ -16,15 +16,15 @@ RabbitMQ: Kullanıldı
 MERVE SÜRÜCÜ BACKEND
 ---
 
- 1.Kullanıcı Kayıt Olma API'sı
+1. Kullanıcı Kayıt Olma API'sı
 
- 2.Kullanıcı Giriş Yapma  API'sı
+2. Kullanıcı Giriş Yapma  API'sı
 
- 3.Kullanıcı Çıkış  Yapma API'sı
+3. Kullanıcı Çıkış  Yapma API'sı
 
- 4.Kullanıcı Hesap Silme  API'sı
+4. Kullanıcı Hesap Silme  API'sı
 
- 5.Kullanıcı Hesap Dondurma  API'sı
+5. Kullanıcı Hesap Dondurma  API'sı
 
 6. Sosyal Bağlantı Ekleme API'sı
 
@@ -34,24 +34,24 @@ MERVE SÜRÜCÜ BACKEND
 
 9. Sosyal Bağlantı Güncelleme API'sı
 
- 10. Kullanıcı Özel Bağlantı Ekleme API'sı
+10. Kullanıcı Özel Bağlantı Ekleme API'sı
   
- 12. Kullanıcı Özel Bağlantıları Alma API'sı
+11. Kullanıcı Özel Bağlantıları Alma API'sı
     
- 13. Kullanıcı Özel Bağlantı Güncelleme API'sı
+12. Kullanıcı Özel Bağlantı Güncelleme API'sı
     
- 14. Kullanıcı Özel Bağlantı Silme API'sı
+13. Kullanıcı Özel Bağlantı Silme API'sı
 
- 15.Kullanıcı Profil Yönetim API'sı 
+14. Kullanıcı Profil Yönetim API'sı 
 
- 16.Kullanıcı Ayarlar API'sı
+15. Kullanıcı Ayarlar API'sı
 
- 17.Analiz Veri Tabanı yönetimi
+16. Analiz Veri Tabanı yönetimi
 
- 18.Analiz  Servisi(tıklama sayıları) Apı'sı
+17. Analiz  Servisi(tıklama sayıları) Apı'sı
 
- 19.Analiz veri işleme servisi
+18. Analiz veri işleme servisi
 
- 20.Önbellekleme Servisi(Redis)
+19. Önbellekleme Servisi(Redis)
 
 
