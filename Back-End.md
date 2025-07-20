@@ -26,7 +26,7 @@ MERVE SÜRÜCÜ BACKEND
 
 5.Kullanıcı Hesap Dondurma  API'sı
 
-6. Sosyal Bağlantı Ekleme API'sı
+ 6. Sosyal Bağlantı Ekleme API'sı
 
 7. Sosyal Bağlantı Silme API'sı
 
