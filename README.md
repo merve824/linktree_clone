@@ -9,7 +9,7 @@ Proje Türü: Web Uygulaması, Sosyal Medya Aracı
 
 Referans: [Linktree](https://linktr.ee/)
 
-Uygulama Adresi: https://mylinkhub.store/
+Uygulama Adresi: https://mylinkhub-fe.vercel.app/
 
 Grup adı: LinkHub
 
