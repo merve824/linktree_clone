@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { PRIMARY_COLOR } from '../../../lib/constants';
 
 export default function About() {
@@ -43,13 +44,11 @@ export default function About() {
             </h2>
             <p className="text-gray-700 leading-relaxed">
                 Sorularınız veya önerileriniz için{' '}
-                <a
-                    href="/contact"
-                    className="underline"
-                    style={{ color: PRIMARY_COLOR }}
-                >
-                    iletişim sayfamızı
-                </a>{' '}
+                <Link href="/contact">
+                    <a className="underline" style={{ color: PRIMARY_COLOR }}>
+                        iletişim sayfamızı
+                    </a>
+                </Link>
                 ziyaret edebilirsiniz.
             </p>
         </section>
