@@ -140,7 +140,7 @@ export default function AccountPage() {
 
             setCustomLinks(customLinks);
         } catch (error) {
-            // err
+            // errr
         } finally {
             setTimeout(() => {
                 dispatch(hideLoading());
