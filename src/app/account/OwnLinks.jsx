@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import { PRIMARY_COLOR } from '../../../lib/constants';
 
 export default function OwnLinks({ customLinks, onAdd, onUpdate, onDelete }) {
@@ -50,10 +50,11 @@ export default function OwnLinks({ customLinks, onAdd, onUpdate, onDelete }) {
         const updatedLinks = links.map((item) => {
             const selectedItem = item._id === id;
             if (selectedItem) {
-                item[key] = value;
+                return { ...item, [key]: value };
             }
             return item;
         });
+        console.log(updatedLinks);
         setLinks(updatedLinks);
     };
 
@@ -64,8 +65,8 @@ export default function OwnLinks({ customLinks, onAdd, onUpdate, onDelete }) {
             return;
         }
 
-        setForm({ imagePreview: '', title: '', description: '', url: '' });
         onAdd(form);
+        setForm({ imagePreview: '', title: '', description: '', url: '' });
     };
 
     return (
