@@ -1,14 +1,16 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { PRIMARY_COLOR } from '../../../lib/constants';
+import { use, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { preChooseUsername } from '@/services/userServices';
+import { createProfile, preChooseUsername } from '@/services/userServices';
 import {
     setRegistrationEmail,
     setRegistrationPhone,
+    setRegistrationUsername,
 } from '../../../lib/slices/userSlice';
 import { hideLoading, showLoading } from '../../../lib/slices/loadingSlice';
+import RegistrationStepper from '@/components/registration/RegistrationStepper';
+import { uploadImageToImgbb } from '@/services/imageService';
 
 export default function UsernameForm() {
     const dispatch = useDispatch();
@@ -26,7 +28,8 @@ export default function UsernameForm() {
         setUsername(registrationUsername);
     }, [registrationUsername]);
 
-    async function handleSubmit() {
+    const checkUsername = async (username) => {
+        setTaken('');
         let data;
         if (registrationPhone) {
             data = {
@@ -39,14 +42,54 @@ export default function UsernameForm() {
                 email: registrationEmail,
             };
         } else {
-            return;
+            return false;
         }
 
         dispatch(showLoading());
         try {
             await preChooseUsername(data, token);
+            return true;
+        } catch (error) {
+            setTaken(error);
+            return false;
+        } finally {
+            dispatch(hideLoading());
+        }
+    };
+
+    const register = async (user) => {
+        let data;
+        if (registrationPhone) {
+            data = {
+                phone: registrationPhone,
+                ...user,
+            };
+        } else if (registrationEmail) {
+            data = {
+                email: registrationEmail,
+                ...user,
+            };
+        } else {
+            return;
+        }
+
+        dispatch(showLoading());
+
+        console.log(data);
+
+        try {
+            let imageUrl = '';
+            if (data.imageFile) {
+                imageUrl = await uploadImageToImgbb(data.imageFile);
+            }
+
+            data.avatarUrl = imageUrl;
+
+            await createProfile(data, token);
+
             dispatch(setRegistrationEmail(''));
             dispatch(setRegistrationPhone(''));
+            dispatch(setRegistrationUsername(''));
             localStorage.removeItem('registrationEmail');
             localStorage.removeItem('registrationPhone');
             localStorage.removeItem('registrationUsername');
@@ -56,43 +99,16 @@ export default function UsernameForm() {
         } finally {
             dispatch(hideLoading());
         }
-    }
+
+        console.log(data);
+    };
 
     return (
-        <form action={handleSubmit} className="pt-16">
-            <h1 className="text-3xl font-bold text-center mb-2">
-                Kullanıcı adını belirle
-            </h1>
-            <p className="text-center mb-6 text-gray-500">
-                Seni en iyi yansıtan bir kullanıcı adı seç.
-            </p>
-
-            <div className="max-w-xs mx-auto">
-                <input
-                    name="username"
-                    className="block shadow-md p-2 mx-auto border w-full mb-2 text-center rounded-md focus:outline-none focus:ring-2 focus:ring-green-800"
-                    value={username || ''}
-                    type="text"
-                    onChange={(e) => {
-                        setUsername(e.target.value);
-                    }}
-                    placeholder="kullanıcı adı"
-                />
-
-                {taken && (
-                    <div className="bg-red-100 border border-red-400 text-red-700 p-2 mb-2 text-center rounded-md">
-                        {taken}
-                    </div>
-                )}
-
-                <button
-                    type="submit"
-                    className="w-full text-white py-3 rounded-md hover:opacity-90 transition-opacity"
-                    style={{ backgroundColor: PRIMARY_COLOR }}
-                >
-                    Kaydı Tamamla
-                </button>
-            </div>
-        </form>
+        <RegistrationStepper
+            initialUsername={username}
+            checkUsername={checkUsername}
+            isUsernameTaken={taken}
+            register={register}
+        />
     );
 }

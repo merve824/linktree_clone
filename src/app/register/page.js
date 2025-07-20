@@ -164,7 +164,7 @@ export default function Register() {
                             required
                             value={formData.phone}
                             onChange={handleInputChange}
-                            placeholder="+90 5xx xxx xx xx"
+                            placeholder="5xx xxx xx xx"
                             className="w-full border shadow-md border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#3E5F44]"
                         />
                     </div>

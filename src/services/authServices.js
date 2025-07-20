@@ -8,6 +8,7 @@ const register = async (data) => {
         const response = await axios.post(`${AUTH_API}/register`, data);
         return response.data;
     } catch (error) {
+        console.log(error);
         throw error.response?.data?.message;
     }
 };

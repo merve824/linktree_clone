@@ -46,6 +46,17 @@ const chooseUsername = async (data, token) => {
     }
 };
 
+const createProfile = async (data, token) => {
+    try {
+        const response = await axios.post(`${USER_API}/crerate-profile`, data, {
+            headers: { Authorization: `Bearer ${token}` },
+        });
+        return response;
+    } catch (error) {
+        throw error.reponse.data.message;
+    }
+};
+
 const getUserProfile = async (username) => {
     try {
         const response = await axios.get(`${USER_API}/profile/${username}`);
@@ -214,6 +225,7 @@ export {
     getUsername,
     chooseUsername,
     preChooseUsername,
+    createProfile,
     getUserProfile,
     getAccountDetails,
     updateProfile,
