@@ -1,4 +1,4 @@
-Linktree Clone Domain Adresi https://mylinkhub.store/
+Linktree Clone Domain Adresi https://mylinkhub-fe.vercel.app/
 
 MERVE SÜRÜCÜ FRONT-END 
 ---
