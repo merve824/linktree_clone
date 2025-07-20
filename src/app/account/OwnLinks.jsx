@@ -48,13 +48,12 @@ export default function OwnLinks({ customLinks, onAdd, onUpdate, onDelete }) {
         const value = e.target.value;
 
         const updatedLinks = links.map((item) => {
-            const selectedItem = item._id === id;
+            const selectedItem = item._id?.toString() === id?.toString();
             if (selectedItem) {
                 return { ...item, [key]: value };
             }
             return item;
         });
-        console.log(updatedLinks);
         setLinks(updatedLinks);
     };
 
