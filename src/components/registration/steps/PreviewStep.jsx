@@ -45,7 +45,7 @@ export default function PreviewStep({
                 </div>
                 <PreviewItem
                     label={'Kullanıcı Adı'}
-                    value={`mylinkhub.to/${username}`}
+                    value={`mylinkhub-fe.vercel.app/${username}`}
                 />
                 <PreviewItem label={'Tam Ad'} value={about.fullname} />
                 {about.bio && (

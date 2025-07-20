@@ -20,7 +20,7 @@ export default function ProfileSection({ user, handleSave }) {
 
     const handleCopy = () => {
         if (user.username) {
-            const link = `mylinkhub.to/${user.username}`;
+            const link = `mylinkhub-fe.vercel.app/${user.username}`;
             navigator.clipboard.writeText(link);
             setCopied(true);
             setTimeout(() => setCopied(false), 1500);
@@ -160,7 +160,7 @@ export default function ProfileSection({ user, handleSave }) {
                                 title="Tıklayarak kopyala"
                             >
                                 {user.username
-                                    ? `mylinkhub.to/${user.username}`
+                                    ? `mylinkhub-fe.vercel.app/${user.username}`
                                     : ''}
                             </p>
                             {copied && (
@@ -222,7 +222,7 @@ export default function ProfileSection({ user, handleSave }) {
                             </label>
                             <div className="flex shadow-md items-center border border-gray-300 rounded overflow-hidden focus-within:ring-2 focus-within:ring-[#3E5F44]">
                                 <span className="px-3 text-gray-600 text-sm">
-                                    mylinkhub.to/
+                                    mylinkhub-fe.vercel.app/
                                 </span>
                                 <input
                                     type="text"

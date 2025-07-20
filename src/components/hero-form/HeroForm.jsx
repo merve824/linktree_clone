@@ -26,7 +26,7 @@ export default function HeroForm() {
             onSubmit={handleSubmit}
             className="inline-flex items-center shadow-lg bg-white shadow-gray-500/20"
         >
-            <span className="bg-white py-4 pl-4">mylinkhub.to/</span>
+            <span className="bg-white py-4 pl-4">mylinkhub-fe.vercel.app/</span>
             <input
                 type="text"
                 className="focus:outline-none focus:ring-0"
