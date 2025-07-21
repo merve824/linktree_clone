@@ -138,7 +138,7 @@ Redis:Kullanıldı
     Yetkilendirme: Bu endpoint, `Authorization` başlığında Bearer token ile çağrılmalıdır. <br>
     **İstek Query**
 
-    ```json
+    ```
     /user/profile/merve
     ```
 
@@ -195,7 +195,7 @@ Redis:Kullanıldı
     Yetkilendirme: Bu endpoint, `Authorization` başlığında Bearer token ile çağrılmalıdır. <br>
     **İstek Query**
 
-    ```json
+    ```
     /user/social-link/youtube
     ```
 
@@ -272,7 +272,7 @@ Redis:Kullanıldı
     Yetkilendirme: Bu endpoint, `Authorization` başlığında Bearer token ile çağrılmalıdır. <br>
     **İstek Query**
 
-    ```json
+    ```
     /user/custom-links/687d6b15e448b868edbcef22
     ```
 
@@ -315,6 +315,6 @@ Redis:Kullanıldı
     Endpoint: `/redis/:username` <br>
     **İstek Query**
 
-    ```json
+    ```
     /redis/merve
     ```
