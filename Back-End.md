@@ -1,8 +1,8 @@
 Domain Adresi: https://mylinkhub-fe.vercel.app
 
-API Adresi: https://mylinkhub-be.vercel.app/api/v1
+Backend Adresi: https://github.com/merve824/mylinkhub-be
 
-Github Adresi: https://github.com/merve824/mylinkhub-be
+API Adresi: https://mylinkhub-be.vercel.app/api/v1
 
 Docker: Kullanıldı
 
