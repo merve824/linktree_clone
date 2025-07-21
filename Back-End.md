@@ -1,4 +1,6 @@
-Domain Adresi: https://mylinkhub-fe.vercel.app/api/v1
+Domain Adresi: https://mylinkhub-fe.vercel.app
+
+API Adresi: https://mylinkhub-be.vercel.app/api/v1
 
 Github Adresi: https://github.com/merve824/mylinkhub-be
 
