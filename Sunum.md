@@ -6,7 +6,7 @@ https://www.youtube.com/watch?v=XF0POirCfCo
 
 ---
 
-### 2️ Postman ile REST API Testi
+### 2️ Postman ile REST API Kullanımı
 
 https://www.youtube.com/watch?v=Hoz0qfXcmsg
 
